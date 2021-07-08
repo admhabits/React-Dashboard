@@ -1,4 +1,4 @@
 <?php 
 
 
-echo "Alam Santiko Wibowo is a FullStack Developers";
+echo $env->GOOGLE_CREDENTIALS;
