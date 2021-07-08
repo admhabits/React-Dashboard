@@ -1,4 +1,4 @@
 <?php 
 
 
-echo $env->GOOGLE_CREDENTIALS;
+var_dump($env->GOOGLE_CREDENTIALS);
