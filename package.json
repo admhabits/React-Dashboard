@@ -11,7 +11,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "heroku deploy": "git push heroku main"
+    "deploy": "git push heroku main"
   },
   "browserslist": {
     "production": [
