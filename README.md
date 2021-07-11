@@ -1,5 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+# Building React Responsive Dashboard
+Membuat Responsive Mobile Dashboard Admin menggunakan react js
+<img
+src="img/dashboard-img.png"
+raw=true
+alt="Dashboard Demo"
+style="margin-right: 10px;"
+/>
+>>>>>>> 39c9aba861eb9c57849da96ef74d15030b903f32
+=======
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -71,14 +81,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 =======
-# Building React Responsive Dashboard
-Membuat Responsive Mobile Dashboard Admin menggunakan react js
-<img
-src="img/dashboard-img.png"
-raw=true
-alt="Dashboard Demo"
-style="margin-right: 10px;"
-/>
->>>>>>> 39c9aba861eb9c57849da96ef74d15030b903f32
-=======
-
