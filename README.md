@@ -1,2 +1,3 @@
-# React-Dashboard
-Building React Responsive Dashboard
+# Building React Responsive Dashboard
+Membuat Responsive Mobile Dashboard Admin menggunakan react js
+
