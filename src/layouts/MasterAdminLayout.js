@@ -24,7 +24,7 @@ export default class MasterAdminLayout extends Component {
 
 				<AdminSidebar path={`${this.rootPath}/data/layout/sidebar/`}/>
 
-				<AdminContent >
+				<AdminContent gaya={{gridTemplateColumns: "2fr", gridTemplateRows: "auto"}} >
 						{ this.children }
 				</AdminContent>
 
