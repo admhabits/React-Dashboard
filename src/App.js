@@ -1,43 +1,69 @@
-import React, { Component } from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+import React, { Component, StrictMode } from 'react';
+import { BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 
-import AddTutorial from "./components/add-tutorial.component";
-import TutorialsList from "./components/tutorials-list.component";
+import MasterAdminLayout from './layouts/MasterAdminLayout';
+import MasterClientLayout from './layouts/MasterClientLayout';
+import ManageData from './pages/ManageData';
+import Dashboard from './pages/Dashboard';
 
-class App extends Component {
+import "./assets/css/form-control.css";
+import "./assets/css/table.css";
+import "./assets/css/icons.css";
+import "./assets/css/overflow-handle.css";
+
+export default class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      username: 'alamhafidz'
+    };
+  }
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <a href="/tutorials" className="navbar-brand">
-            bezKoder
-          </a>
-          <div className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to={"/tutorials"} className="nav-link">
-                Tutorials
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"/add"} className="nav-link">
-                Add
-              </Link>
-            </li>
-          </div>
-        </nav>
-
-        <div className="container mt-3">
-          <h2>React Firebase Database CRUD</h2>
+      <StrictMode>
+      <div className='app'>
+        <BrowserRouter>
           <Switch>
-            <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
-            <Route exact path="/add" component={AddTutorial} />
+              <Route exact path="/" component={()=>(
+
+                    <>Landing Page</>
+
+                )}/>
+              <Route  path="/users" render={()=>(
+
+                  <MasterClientLayout>
+                      <Switch>
+                        <Route  exact path={"/users/profile"} render={()=>(<>Profile Dashboard</>)}/>
+                        <Route  exact path={"/users/home"} render={()=>(<>Admin Dashboard</>)}/>
+                        <Redirect from="/users" to="/users/profile" />
+                      </Switch>
+                  </MasterClientLayout>
+
+                )}/>
+
+              <Route  path="/admin" render={()=>(
+                  <MasterAdminLayout rootPath={`/users/${this.state.username}/`}>
+                      <Switch>
+                        <Route  exact path={"/admin/dashboard/main"} render={()=>(
+                          <><Dashboard/></>
+                        )}/>
+                        <Route  exact path={"/admin/dashboard/manage_data"} render={()=>(
+                          <><ManageData/></>
+                        )}/>
+                        <Route  exact path={"/admin/dashboard/explore_data"} render={()=>(<>Explore Data</>)}/>
+                        <Route  exact path={"/admin/dashboard/manage_assets"} render={()=>(<>Assets Data</>)}/>
+                        <Redirect from="/admin" to="/admin/dashboard/main" />
+                      </Switch>
+                  </MasterAdminLayout>
+
+                )}/>
+
+              <Route exact path={"/*"} render={()=>(<>Tidak ditemukan</>)}/>
+             
           </Switch>
-        </div>
+        </BrowserRouter>
       </div>
+      </StrictMode>
     );
   }
 }
-
-export default App;

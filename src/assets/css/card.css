@@ -1,0 +1,134 @@
+.card-master {
+	margin: 0px;
+	background: white;
+	padding: 5px;
+	width: 100%;
+	height: auto;
+	display: inherit;
+	box-shadow: 0px 2px 20px rgb(14 46 78 / 8%);
+}
+
+.card-master-header {
+	background: mediumseagreen;
+	color: white;
+	padding: 15px;
+	font-size: 1.5em;
+	font-family: 'Tahoma', sans-serif, monospace;
+	text-decoration-style: solid;
+	text-transform: uppercase;
+	font-weight: 500;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid white;
+
+}
+
+.card-master-body {
+	color: white;
+	padding: 0px;
+	font-size: 12px;
+	font-family: 'Tahoma', sans-serif, monospace;
+	text-decoration-style: solid;
+	text-transform: uppercase;
+	font-weight: 500;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.card-master-header > span.material-icons {
+	margin-top: 0px;
+	/*color: green;*/
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 1080px){
+	.card-master {
+		width: 100%;
+		/*height: 250px;*/
+	}
+
+}
+
+@media only screen and (min-width: 968px){
+	.card-master {
+		width: 100%;
+		/*height: 230px;*/
+	}
+
+	.card-master-header {
+		background: mediumseagreen;
+		padding: 6px;
+		font-size: 1em;
+	}
+}
+
+@media only screen and (max-width: 968px){
+	.card-master {
+		width: 100%;
+		/*height: 200px;*/
+	}
+
+	.card-master-header {
+		background: mediumseagreen;
+		padding: 6px;
+		font-size: 1.2em;
+	}
+
+	.card-master-body {
+		font-size: 11px;
+	}
+
+	.card-master-header > span.material-icons {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.card-master {
+		width: 100%;
+		/*height: 155px;*/
+	}
+
+	.card-master-header {
+		background: mediumseagreen;
+		padding: 6px;
+		font-size: 1.2em;
+	}
+
+	.card-master-body {
+		/*font-size: 11px;*/
+	}
+	.card-master-header > span.material-icons {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 468px){
+	.card-master {
+		width: 100%;
+		/*height: 140px;*/
+	}
+
+	.card-master-header {
+		background: mediumseagreen;
+		padding: 6px;
+		font-size: 1.2em;
+	}
+
+	.card-master-body {
+		font-size: 10px;
+	}
+
+	.card-master-header > span.material-icons {
+		font-size: 24px;
+	}
+}
+
+
+
+
