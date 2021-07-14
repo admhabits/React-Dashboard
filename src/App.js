@@ -32,11 +32,14 @@ export default class App extends Component {
               <Route  path="/users" render={()=>(
 
                   <MasterClientLayout>
+                  
                       <Switch>
+                        <Route  exact path={"/users/home"} render={()=>(<>Home Dashboard</>)}/>
                         <Route  exact path={"/users/profile"} render={()=>(<>Profile Dashboard</>)}/>
-                        <Route  exact path={"/users/home"} render={()=>(<>Admin Dashboard</>)}/>
-                        <Redirect from="/users" to="/users/profile" />
+                        <Route render={()=><>404</>}/>
                       </Switch>
+
+                      <Redirect from="/users" to="/users/home" />
                   </MasterClientLayout>
 
                 )}/>
@@ -45,15 +48,17 @@ export default class App extends Component {
                   <MasterAdminLayout rootPath={`/users/${this.state.username}/`}>
                       <Switch>
                         <Route  exact path={"/admin/dashboard/main"} render={()=>(
-                          <><Dashboard/></>
+                          <><Dashboard {...(this.props)}/></>
                         )}/>
                         <Route  exact path={"/admin/dashboard/manage_data"} render={()=>(
                           <><ManageData/></>
                         )}/>
                         <Route  exact path={"/admin/dashboard/explore_data"} render={()=>(<>Explore Data</>)}/>
                         <Route  exact path={"/admin/dashboard/manage_assets"} render={()=>(<>Assets Data</>)}/>
-                        <Redirect from="/admin" to="/admin/dashboard/main" />
+                        <Route render={()=><>404</>}/>
                       </Switch>
+                      {/*comment redirect for assign 404 page*/}
+                      <Redirect from="/admin" to="/admin/dashboard/main" />
                   </MasterAdminLayout>
 
                 )}/>
