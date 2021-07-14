@@ -14,6 +14,9 @@
 
 /.pnp
 .pnp.js
+firebase.json
+package.json
+
 
 # testing
 /coverage
@@ -27,6 +30,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.firebaserc
+/.firebase
+
 
 npm-debug.log*
 yarn-debug.log*
